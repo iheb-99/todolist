@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #9b59b6;
+  min-height: 100vh;
+}
+
+
+.container{
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+.txtb{
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000;
+  background: none;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+h3{
+  margin: 10px 0;
+}
+
+.task{
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+  padding: 18px;
+  margin: 6px 0;
+  overflow: hidden;
+}
+
+.task i{
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.comp .task{
+  background: rgba(0,0,0,.5);
+  color: #fff;
+}
+
+button{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+button{
+  background: none;
+  color : #ccc;
+  width : 240px;
+  height: 80px;
+  border: 1px solid #338033;
+  font-size : 18px;
+  border-radius: 4px;
+  transition : .6s;
+  overflow : hidden;
+}
+
+button:focus{
+  outline:none;
+}
+
+button:before{
+  content:'';
+  display :block;
+  position: absolute;
+  background-color: rgba(255,255,255,.5);
+  width: 60px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  opacity:  .5;
+  filter: blur(30px);
+  transform: translateX(-130px) skewX(-15deg);
+}
+
+button:after{
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255,255,255,.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(30px);
+  transition: translate(-100px) scaleX(-15deg);
+}
+
+button:hover{
+  background: #338033;
+  cursor: pointer;
+}
+
+button:hover:before{
+  transform: translateX(300px) skewX(-15deg);
+  opacity: .6;
+  transform: .7s;
+}
